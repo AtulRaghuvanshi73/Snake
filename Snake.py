@@ -20,8 +20,15 @@ class cube(object):
 
 
 class snake(object):
+
+    body = []
+    turns = {}
     def __init__(self, color,pos):
-        pass
+        self.color = color
+        self.head = cube(pos)
+        self.body.append(self.head)
+        self.dirnx = 0
+        self.dirny = 1
 
     def move(self):
         pass
@@ -36,11 +43,20 @@ class snake(object):
         pass
 
 def drawGrid(w, rows, surface):
-    pass 
+    sizeBtwn = w // rows
+
+    x = 0
+    y =0 
+    for i in range(rows):
+        x = x + sizeBtwn
+        y = y + sizeBtwn
+
+        pygame.draw.line(surface,(255,255,255),(x,0),(x,w))
+        pygame.draw.line(surface,(255,255,255),(0,y),(w,y))
 
 def redrawWindow(surface):
     global rows, width
-    win.fill((0,0,0))
+    surface.fill((0,0,0))
     drawGrid(width, rows, surface,)
     pygame.display.update()
 
@@ -51,7 +67,7 @@ def message_box(subject, content):
     pass
 
 def main():
-    global width, rows
+    global width, rows, win
     width = 500
     # height = 500
     rows = 20
