@@ -41,7 +41,7 @@ def drawGrid(w, rows, surface):
 def redrawWindow(surface):
     global rows, width
     win.fill((0,0,0))
-    drawGrid(surface)
+    drawGrid(width, rows, surface,)
     pygame.display.update()
 
 def randomSnack(rows, items):
