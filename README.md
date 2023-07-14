@@ -12,7 +12,7 @@ The game provides a nostalgic gaming experience where you control a snake and tr
 
 
 ## Getting Started
-<h2>Requirements: </h2>
+<h3>Requirements: </h3>
 > Python 3.6 or above <br>
 > Pygame library (pip install pygame)
 
